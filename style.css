@@ -1,0 +1,84 @@
+body
+{
+font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1.title {
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+h1.title:after {
+display: inline-block;
+margin: 0 0 8px 20px;
+height: 2px;
+content: " ";
+text-shadow: none;
+background-color: #99B4D1;
+width: 140px;
+}
+
+h1.title:before {
+display: inline-block;
+margin: 0 20px 8px 0;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: #99B4D1;
+width: 140px;
+}
+
+div.centerimg{
+text-align:center;
+}
+
+img.tools{
+width: 108px;
+height: 153px;
+padding: 20px;
+}
+
+div.box{    
+width:600px;
+margin: auto;
+padding: 5px;
+}
+
+fieldset {
+border: 1.5px solid;
+}
+
+textarea {
+resize: none;
+border: 1px solid;
+}
+
+table{
+width: 560px;
+margin: auto;
+}
+
+table, th, td {
+border: 1px solid;
+border-collapse: collapse;
+border-radius: 5px;
+}
+
+caption{
+font-weight: bold;
+padding: 5px;
+}
+
+th, td {
+padding: 5px;
+text-align: center;
+}
+
+img.socialicon{
+display: inline-block;
+width: 30px;
+height: 30px;
+padding: 10px;
+}

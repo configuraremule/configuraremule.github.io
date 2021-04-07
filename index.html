@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Configurar eMule</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#a76512">
+<meta name="msapplication-TileColor" content="#a76512">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Configurar eMule</h1>
+
+<div class="centerimg">
+<a href="https://www.emule-project.net/home/perl/general.cgi?l=17&rm=download"><img class="tools" alt="Wikimedia Commons contributors, File:EMule mascot.svg, Wikimedia Commons, https://commons.wikimedia.org/w/index.php?title=File:EMule_mascot.svg&oldid=458146295 (accessed abril 1, 2021)" src="img/EMule_mascot.svg"></a><a href="https://www.speedtest.net/es"><img class="tools" alt="Wikimedia Commons contributors, File:Speedtest.net logo.svg, Wikimedia Commons, https://commons.wikimedia.org/w/index.php?title=File:Speedtest.net_logo.svg&oldid=480237080 (accessed abril 5, 2021). " src="img/Speedtest.net_logo.svg"></a></div>
+
+<div class="box">
+<fieldset>
+<legend><h1>General</h1></legend>
+<b>Opciones varias</b><br>
+<input type="checkbox" onclick="return false" /> Traer al frente al pulsar un enlace<br>
+<input type="checkbox" onclick="return false" /> Preguntar al salir<br>
+<input type="checkbox" onclick="return false" /> Activar firma en línea (Online-Signature)<br>
+<input type="checkbox" onclick="return false" /> Activar MiniMule<br>
+<input type="checkbox" onclick="return false" /> No suspender el sistema si eMule está funcionando<br>
+<b>Al iniciar</b><br>
+<input type="checkbox" onclick="return false" /> Comprobar si hay una nueva versión<br>
+<input type="checkbox" onclick="return false" /> Mostrar pantalla de inicio<br>
+<input type="checkbox" onclick="return false" checked /> Iniciar minimizado<br>
+<input type="checkbox" onclick="return false" checked /> Iniciar con Windows<br>
+</fieldset>
+</div>
+
+<div class="box">
+<fieldset>
+<legend><h1>Mostrar</h1></legend>
+<input type="checkbox" onclick="return false" checked /> Minimizar al área de notificación<br>
+<input type="checkbox" onclick="return false" checked /> Pinchar dos veces sobre una descarga para ver sus fuentes<br>
+<input type="checkbox" onclick="return false" checked /> Mostrar porcentaje de descarga en barra de progreso<br>
+<input type="checkbox" onclick="return false" /> Mostrar índices de transferencia en el título<br>
+<input type="checkbox" onclick="return false" checked /> Mostrar información de descarga en pestañas de categorías<br>
+<input type="checkbox" onclick="return false" checked /> Limpiar automáticamente descargas completas<br>
+<input type="checkbox" onclick="return false" checked /> Barra de herramientas extra en la ventana de transferencias<br>
+<input type="checkbox" onclick="return false" /> Recordar búsquedas abiertas entre reinicios<br>
+<input type="checkbox" onclick="return false" /> Activar efectos de la barra de tareas de Windows 7<br>
+<b>Conservar uso de CPU y memoria</b><br>
+<input type="checkbox" onclick="return false" /> Desactivar lista de clientes conocidos<br>
+<input type="checkbox" onclick="return false" /> Desactivar lista cola de espera<br>
+<b>AutoCompletar (función registro)</b><br>
+<input type="checkbox" onclick="return false" /> Activado <button type="button">Limpiar</button>
+</fieldset>
+</div>
+
+<div class="box">
+<fieldset>
+<legend><h1>Conexión</h1></legend>
+<table>
+<caption>Configuración de capacidad y límite de descarga y subida</caption>
+<tr>
+<th>Megabytes</th>
+<th>1</th>
+<th>2</th>
+<th>5</th>
+<th>10</th>
+<th>30</th>
+<th>100</th>
+<th>200</th>
+<th>300</th>
+<th>500</th>
+</tr>
+<tr>
+<th>Capacidad bajada<br>(sin límite)</th>
+<td>100</td>
+<td>200</td>
+<td>500</td>
+<td>1000</td>
+<td>3000</td>
+<td>10000</td>
+<td>20000</td>
+<td>30000</td>
+<td>50000</td>
+</tr>
+<tr>
+<th>Capacidad de Subida<br>(con límite)</th>
+<td>50</td>
+<td>100</td>
+<td>200</td>
+<td>500</td>
+<td>1000</td>
+<td>3000</td>
+<td>1000</td>
+<td>30000</td>
+<td>50000</td>
+</tr>
+</table>
+<br>
+<b>Capacidad</b><br>
+Descarga<br>
+<textarea rows="1" cols="5" readonly>22000</textarea> kB/s
+<br>
+<input type="checkbox" onclick="return false" /> Límite de descarga
+<br>
+Subida<br>
+<textarea rows="1" cols="5" readonly>1000</textarea> kB/s
+<br>
+<input type="checkbox" onclick="return false" checked /> Límite de subida: 1000kB/s
+<br>
+<b>Puerto</b><br>
+TCP <textarea rows="1" cols="5" readonly>51941</textarea><br>
+UDP <textarea rows="1" cols="5" readonly>43746</textarea><input type="checkbox" onclick="return false" /> Desactivar <button type="button">Comprobar Puertos</button><br>
+<input type="checkbox" onclick="return false" checked />Utilizar UPnP para redirigir puertos<br>
+<b>Máx. fuentes/archivo</b><br>
+Límite Máximo<br>
+<textarea rows="1" cols="5" readonly>500</textarea><br>
+<b>Límites de conexión</b><br>
+Conexiones máximas<br>
+<textarea rows="1" cols="5" readonly>400</textarea><br>
+<input type="checkbox" onclick="return false" checked /> Autoconectar al iniciar<br>
+<input type="checkbox" onclick="return false" checked />
+ Reconectar al perder la conexión<br>
+<input type="checkbox" onclick="return false" /> Mostrar ancho de banda excedente<br>
+<b>Red</b><br>
+<input type="checkbox" onclick="return false" checked /> Kad <input type="checkbox" onclick="return false" checked /> eD2K<br>
+<button type="button">Asistente</button><br>
+</fieldset>
+</div>
+
+<div class="box">
+<fieldset>
+<legend><h1>Servidor</h1></legend>
+<b>Actualizar</b><br>
+Eliminar servidores caídos tras <textarea rows="1" cols="1" readonly>1</textarea> intentos<br>
+<input type="checkbox" onclick="return false" checked /> Auto-actualizar lista de servidores al iniciar
+<button type="button">Editar...</button><br>
+<textarea rows="1" cols="65" readonly>http://sites.google.com/site/ircemulespanish/descargas-2/server.met</textarea><br>
+<textarea rows="1" cols="35" readonly>http://emuling.gitlab.io/server.met</textarea><br>
+<input type="checkbox" onclick="return false" /> Actualizar lista de servidores al conectar a un servidor<br>
+<input type="checkbox" onclick="return false" /> Actualizar lista de servidores al conectar un cliente<br>
+<b>Opciones varias</b><br>
+<input type="checkbox" onclick="return false" checked /> Control inteligente de ID Baja al conectar.<br>
+<input type="checkbox" onclick="return false" checked /> Conexión segura<br>
+<input type="checkbox" onclick="return false" /> Autoconectar sólo a Servidores fijos<br>
+<input type="checkbox" onclick="return false" checked /> Usar sistema de prioridades<br>
+<input type="checkbox" onclick="return false" /> Asignar prioridad alta a los servidores añadidos a mano
+</fieldset>
+</div>
+
+<div class="box">
+<fieldset>
+<legend><h1>Seguridad</h1></legend>
+<b>Filtrar IP</b><br>
+<input type="checkbox" onclick="return false" checked />Filtrar servidores<br>
+Nivel de filtrado: <textarea rows="1" cols="5" readonly>127</textarea> <button type="button">Recargar</button> <button type="button">Editar...</button><br>
+Actualizar desde URL: (filter.dat o formato PeerGuardian)<br>
+<textarea rows="1" cols="70" readonly>http://sites.google.com/site/ircemulespanish/descargas-2/ipfilter.zip</textarea><br>
+<textarea rows="1" cols="37" readonly>http://emuling.gitlab.io/ipfilter.zip</textarea> <button type="button">Cargar</button><br>
+<b>Ver mis archivos y directorios compartidos</b><br>
+<input type="radio" name="Todos" disabled />Todos <input type="radio" name="SoloAmigos" disabled />Sólo amigos <input type="radio" name="Nadie" checked />Nadie<br>
+<b>Ofuscación de Protocolo</b><br>
+<input type="checkbox" onclick="return false" checked /> Activar la Ofuscación de Protocolo<br>
+<input type="checkbox" onclick="return false" checked /> Sólo permitir conexiones ofuscadas (no recomendado)<br>
+<input type="checkbox" onclick="return false" /> No permitir conexiones ofuscadas<br>
+<b>Opciones varias</b><br>
+<input type="checkbox" onclick="return false" checked /> Usar identificación segura<br>
+<input type="checkbox" onclick="return false" disabled /> Iniciar eMule como Usuario limitado<br>
+<input type="checkbox" onclick="return false" checked /> Activar Filtro de Spam para los resultados de las búsquedas<br>
+<input type="checkbox" onclick="return false" checked /> Advertir cuando se abran archivos potencialmente dañinos
+</fieldset>
+</div>
+
+<div class="box">
+<fieldset>
+<legend><h1>Agradecimientos</h1></legend>
+<ul>
+<li><b>eMule-Project.net - Sitio Oficial de eMule</b><br><a href="https://www.emule-project.net/home/perl/general.cgi?l=17">https://www.emule-project.net/home/perl/general.cgi?l=17</a></li>
+<li><b>Speedtest por Ookla</b><br><a href="https://www.speedtest.net">https://www.speedtest.net</a></li>
+<li><b>ADSLZone: Configurar Emule : Tutoriales y trucos por Javier Sanz</b><br><a href="https://www.adslzone.net/emule.html">https://www.adslzone.net/emule.html</a></li>
+<li><b>Usando eMule - #eMule-Spanish</b><br><a href="https://sites.google.com/site/ircemulespanish/usando-emule">https://sites.google.com/site/ircemulespanish/usando-emule</a></li>
+</ul>
+</fieldset>
+</div>
+
+<br>
+<div class="centerimg">
+<a href="https://github.com/configuraremule/configuraremule.github.io"><img class="socialicon" alt="GitHub Logos and Usage · GitHub https://github.com/logos" src="img/GitHub_mark.svg"></a><a href="mailto:configuraemule@protonmail.com"><img class="socialicon" alt="At Icon | Font Awesome https://fontawesome.com/icons/at?style=solid Creative Commons Attribution 4.0 International" src="img/Mail_icon.svg"></a>
+</div>
+<br>
+
+</body>
+</html>
