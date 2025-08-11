@@ -99,6 +99,46 @@
 </tr>
 </table>
 <br>
+<form id="configForm">
+<table>
+<tr>
+<td>Descarga (Mbps): <textarea rows="1" cols="10" type="number" id="download" min="1" required></textarea></td>
+<td>Porcentaje de ancho de banda: <textarea rows="1" cols="3" type="number" id="percent" min="0" max="100" required></textarea></td>
+</tr>
+<tr>
+<td>Subida (Mbps): <textarea rows="1" cols="10" type="number" id="upload" min="1" required></textarea></td>
+<td><button type="button" onclick="calculateConfig()">Calcular velocidades</button></td>
+</tr>
+</table>
+</form>
+<div id="result"></div>
+<script>
+  function calculateConfig() {
+    const down = parseFloat(document.getElementById('download').value);
+    const up = parseFloat(document.getElementById('upload').value);
+    const percent = parseFloat(document.getElementById('percent').value);
+
+    let errors = [];
+
+    if (isNaN(down) || down <= 0) errors.push("La descarga debe ser un número positivo.");
+    if (isNaN(up) || up <= 0) errors.push("La subida debe ser un número positivo.");
+    if (isNaN(percent) || percent < 0 || percent > 100)
+      errors.push("El porcentaje debe estar entre 0 y 100.");
+
+    if (errors.length > 0) {
+      document.getElementById('result').innerHTML = errors.join("<br>");
+      return;
+    }
+
+    const factor = percent / 100;
+    const downLimit = Math.round(down * 1024 * factor); // Mbps → KB/s
+    const upLimit = Math.round(up * 1024 * factor);
+
+    document.getElementById('result').innerHTML =
+      `📉 Límite de descarga: ${downLimit} KB/s<br>📈 Límite de subida: ${upLimit} KB/s`;
+  }
+</script>
+<br>
 <b>Capacidad</b><br>
 Descarga<br>
 <textarea rows="1" cols="5" readonly>10000</textarea> kB/s
@@ -179,6 +219,10 @@ Actualizar desde URL: (filter.dat o formato PeerGuardian)<br>
 <li><b>Speedtest por Ookla</b><br><a href="https://www.speedtest.net">https://www.speedtest.net</a></li>
 <li><b>ADSLZone: Configurar Emule : Tutoriales y trucos por Javier Sanz</b><br><a href="https://www.adslzone.net/emule.html">https://www.adslzone.net/emule.html</a></li>
 <li><b>Usando eMule - #eMule-Spanish</b><br><a href="https://sites.google.com/site/ircemulespanish/usando-emule">https://sites.google.com/site/ircemulespanish/usando-emule</a></li>
+<li><b>eMule-Project::Test de conexión</b><br><a href="http://porttest.emule-project.net:81/ct_noframe.php?lang=1034&tcpport=4662&udpport=4672">http://porttest.emule-project.net:81/ct_noframe.php?lang=1034&tcpport=4662&udpport=4672</a></li>
+<li><b>Puertos eMule - Test de velocidad de internet para fibra y móvil</b><br><a href="https://www.testdevelocidad.es/test-de-puertos/aplicaciones/emule/">https://www.testdevelocidad.es/test-de-puertos/aplicaciones/emule/</a></li>
+<li><b>amule-project/amule: 'All-platform' P2P client based on eMule</b><br><a href="https://github.com/amule-project/amule">https://github.com/amule-project/amule</a></li>
+<li>Comunitat a Reddit<br><a href="https://www.reddit.com/r/emule/">https://www.reddit.com/r/emule/</a></li>
 </ul>
 </fieldset>
 </div>
